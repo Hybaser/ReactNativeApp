@@ -86,6 +86,7 @@ class Prepare extends Component {
         this.onTokenRefreshListener = firebase.messaging().onTokenRefresh(fcmToken => this.getRequiredDatas);
     }
 
+    //notification events set
     handleNotifications = () => {
 
         const channel = new firebase.notifications.Android.Channel(NOTIFICATION_CHANNEL_ID, NOTIFICATION_CHANNEL_NAME, firebase.notifications.Android.Importance.Max).setDescription(NOTIFICATION_CHANNEL_NAME);
